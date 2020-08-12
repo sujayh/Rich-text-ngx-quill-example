@@ -1,0 +1,15 @@
+<quill-editor [(ngModel)]="htmlText"
+  placeholder="Enter Text"
+  [modules]="quillConfig"
+  (onSelectionChanged)="onSelectionChanged($event)"
+  (onContentChanged)="onContentChanged($event)"></quill-editor>
+
+<h3>Show Tags Here</h3>
+  <div>
+    <pre>{{htmlText}}</pre>
+  </div>
+
+  <div class="toolbar">
+  <h3>Show HTML Here</h3>
+  <p [innerHTML]="htmlText"></p>
+</div>
